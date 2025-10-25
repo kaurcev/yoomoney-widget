@@ -19,7 +19,7 @@ import { Yoomoney } from 'yoomoney-widget';
 function App() {
   return (
     <Yoomoney
-        receiver="4100110853907883"
+        receiver="0000000000000000"
         label="Пополнение счета"
         successURL="https://kaurcev.dev/success"
         defaultSum={100}
@@ -36,7 +36,7 @@ import { Yoomoney } from 'yoomoney-widget';
 function App() {
   return (
     <Yoomoney
-        receiver="4100110853907883"
+        receiver="0000000000000000"
         logo="white"
         defaultSum={500}
         minSum={100}
@@ -52,7 +52,7 @@ import { Yoomoney } from 'yoomoney-widget';
 function App() {
   return (
     <Yoomoney
-        receiver="4100110853907883"
+        receiver="0000000000000000"
         formStyle={{
             backgroundColor: '#f9f9f9',
             padding: '20px',
@@ -102,7 +102,7 @@ import { Yoomoney } from 'yoomoney-widget';
 function App() {
   return (
     <Yoomoney
-        receiver="4100110853907883"
+        receiver="0000000000000000"
         label="Заказ #12345"
         successURL="https://kaurcev.dev/payment/success"
         defaultSum={1500}
