@@ -1,0 +1,9 @@
+src/
+copy-files.js
+tsconfig.json
+.git/
+.gitignore
+*.log
+node_modules/
+.DS_Store
+*.tsbuildinfo

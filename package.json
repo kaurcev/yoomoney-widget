@@ -1,0 +1,46 @@
+{
+  "name": "yoomoney-widget",
+  "version": "1.0.0",
+  "description": "React component for YooMoney payment form with built-in Factor IO fonts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && node copy-files.js",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"No tests specified\""
+  },
+  "keywords": [
+    "yoomoney",
+    "payment",
+    "react",
+    "widget",
+    "form",
+    "typescript"
+  ],
+  "author": "kaurcev skaurcev2004@yandex.ru",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaurcev/yoomoney-widget"
+  },
+  "homepage": "https://github.com/kaurcev/yoomoney-widget#readme",
+  "bugs": {
+    "url": "https://github.com/kaurcev/yoomoney-widget/issues"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "typescript": "^5.0.0",
+    "fs-extra": "^11.1.0",
+    "@types/fs-extra": "^11.0.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
