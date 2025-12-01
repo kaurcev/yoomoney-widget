@@ -1,2 +1,4 @@
 export { Yoomoney } from './Yoomoney';
-export type { YoomoneyProps } from './types';
+export { YoomoneyModal } from './YoomoneyModal';
+export { YoomoneyPanel } from './YoomoneyPanel';
+export type { YoomoneyProps, YoomoneyModalProps, YoomoneyPanelProps } from './types';

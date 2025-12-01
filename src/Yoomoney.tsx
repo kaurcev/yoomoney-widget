@@ -12,6 +12,7 @@ export const Yoomoney: React.FC<YoomoneyProps> = ({
   minSum = 10,
   className = '',
   logo = 'black',
+  logoAlign = 'center',
   formStyle = {},
   inputStyle = {},
   buttonStyle = {}
@@ -20,16 +21,18 @@ export const Yoomoney: React.FC<YoomoneyProps> = ({
 
   const baseFormStyle: React.CSSProperties = {
     backgroundColor: '#ffffff',
-    padding: '10px',
+    padding: '20px',
+    maxWidth: '400px',
     borderRadius: '28px',
     boxShadow: '0 0 10px 0 #91aeff4f',
     boxSizing: 'border-box',
     fontFamily: "'Factor IO', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    width: '100%',
     ...formStyle
   };
 
   const baseInputStyle: React.CSSProperties = {
-    padding: '10px 15px',
+    padding: '12px 16px',
     border: '2px solid transparent',
     background: '#f2f4f8',
     borderRadius: '8px',
@@ -37,11 +40,12 @@ export const Yoomoney: React.FC<YoomoneyProps> = ({
     boxSizing: 'border-box',
     fontFamily: 'inherit',
     fontSize: '16px',
+    maxWidth: '100%',
     ...inputStyle
   };
 
   const baseButtonStyle: React.CSSProperties = {
-    padding: '10px 15px',
+    padding: '12px 16px',
     border: '2px solid transparent',
     background: '#702ff4',
     color: '#fff',
@@ -51,12 +55,17 @@ export const Yoomoney: React.FC<YoomoneyProps> = ({
     cursor: 'pointer',
     fontFamily: 'inherit',
     fontSize: '16px',
+    maxWidth: '100%',
+    boxSizing: 'border-box',
     ...buttonStyle
   };
 
   const logoContainerStyle: React.CSSProperties = {
-    textAlign: 'center' as const,
-    marginBottom: '15px'
+    textAlign: logoAlign as 'left' | 'center' | 'right',
+    marginBottom: '20px',
+    width: '100%',
+    maxWidth: '100%',
+    boxSizing: 'border-box'
   };
 
   const labelStyle: React.CSSProperties = {
@@ -64,14 +73,20 @@ export const Yoomoney: React.FC<YoomoneyProps> = ({
     alignItems: 'center',
     gap: '8px',
     cursor: 'pointer',
-    fontSize: '14px'
+    fontSize: '14px',
+    flex: '1 1 auto',
+    minWidth: 0,
+    boxSizing: 'border-box'
   };
 
   const duoContainerStyle: React.CSSProperties = {
     display: 'flex',
     gap: '15px',
-    marginBottom: '15px',
-    justifyContent: 'space-between'
+    marginBottom: '20px',
+    justifyContent: 'space-between',
+    width: '100%',
+    maxWidth: '100%',
+    boxSizing: 'border-box'
   };
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -120,14 +135,18 @@ export const Yoomoney: React.FC<YoomoneyProps> = ({
             alt="YooMoney" 
             width={120}
             height={40}
+            style={{ maxWidth: '100%', height: 'auto' }}
           />
         </div>
 
         <p className="mini" style={{ 
-          margin: '0 0 10px 0', 
+          margin: '0 0 12px 0', 
           fontSize: '14px', 
           color: '#666',
-          fontWeight: 400 
+          fontWeight: 400,
+          width: '100%',
+          maxWidth: '100%',
+          boxSizing: 'border-box'
         }}>
           Сумма пополнения (От {minSum}₽)
         </p>
@@ -143,9 +162,12 @@ export const Yoomoney: React.FC<YoomoneyProps> = ({
         />
         
         <h4 style={{ 
-          margin: '15px 0 10px 0', 
+          margin: '20px 0 12px 0', 
           fontSize: '16px',
-          fontWeight: 500 
+          fontWeight: 500,
+          width: '100%',
+          maxWidth: '100%',
+          boxSizing: 'border-box'
         }}>
           Способ пополнения
         </h4>
