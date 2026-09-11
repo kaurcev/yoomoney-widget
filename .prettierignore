@@ -1,0 +1,12 @@
+node_modules/
+dist/
+dist-dev/
+build/
+.output/
+package-lock.json
+
+.vscode/
+.idea/
+
+screens/
+dev/

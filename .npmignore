@@ -1,9 +1,6 @@
-src/
-copy-files.js
-tsconfig.json
-.git/
-.gitignore
+# Оставь только то, что не покрывается files[]
 *.log
-node_modules/
-.DS_Store
 *.tsbuildinfo
+coverage/
+.vscode/
+.idea/

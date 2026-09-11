@@ -1,0 +1,13 @@
+node_modules/
+dist/
+dist-dev/
+coverage/
+.output/
+package-lock.json
+.vscode/
+.idea/
+screens/
+dev/
+scripts/
+*.config.js
+*.config.ts
