@@ -1,0 +1,280 @@
+/* ---------- Fonts (opt-in) ---------- */
+@font-face {
+  font-family: 'Factor IO';
+  font-weight: 400;
+  font-display: swap;
+  src: url('./font/factor-io-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Factor IO';
+  font-weight: 500;
+  font-display: swap;
+  src: url('./font/factor-io-medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Factor IO';
+  font-weight: 700;
+  font-display: swap;
+  src: url('./font/factor-io-bold.woff2') format('woff2');
+}
+
+/* ---------- Design tokens ---------- */
+:root {
+  --yw-font: 'Factor IO', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --yw-color-primary: #702ff4;
+  --yw-color-primary-hover: #5d24d1;
+  --yw-color-on-primary: #fff;
+  --yw-color-text: #1a1a1a;
+  --yw-color-text-muted: #666;
+  --yw-color-bg: #fff;
+  --yw-color-input-bg: #f2f4f8;
+  --yw-color-border: transparent;
+  --yw-color-overlay: rgba(0, 0, 0, 0.5);
+
+  --yw-radius-sm: 8px;
+  --yw-radius-md: 12px;
+  --yw-radius-lg: 28px;
+  --yw-radius-pill: 500px;
+
+  --yw-space-xs: 8px;
+  --yw-space-sm: 12px;
+  --yw-space-md: 20px;
+  --yw-space-lg: 24px;
+
+  --yw-shadow-form: 0 0 10px 0 #91aeff4f;
+  --yw-shadow-modal: 0 20px 60px rgba(0, 0, 0, 0.15);
+
+  --yw-transition: 0.3s ease;
+  --yw-z-overlay: 1000;
+  --yw-modal-blur: 4px;
+  --yw-modal-max-width: 440px;
+  --yw-panel-width: 400px;
+  --yw-form-max-width: 400px;
+}
+
+.yw-form,
+.yw-form *,
+.yw-modal,
+.yw-modal *,
+.yw-panel,
+.yw-panel * {
+  box-sizing: border-box;
+}
+
+/* ---------- Form ---------- */
+.yw-form {
+  font-family: var(--yw-font);
+  background: var(--yw-color-bg);
+  color: var(--yw-color-text);
+  padding: var(--yw-space-md);
+  max-width: var(--yw-form-max-width);
+  width: 100%;
+  border-radius: var(--yw-radius-lg);
+  box-shadow: var(--yw-shadow-form);
+}
+
+.yw-form__logo {
+  margin-bottom: var(--yw-space-md);
+}
+
+.yw-form__logo--left {
+  text-align: left;
+}
+
+.yw-form__logo--center {
+  text-align: center;
+}
+
+.yw-form__logo--right {
+  text-align: right;
+}
+
+.yw-form__logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.yw-form__label {
+  display: block;
+  margin: 0 0 var(--yw-space-sm) 0;
+  font-size: 14px;
+  color: var(--yw-color-text-muted);
+}
+
+.yw-form__input {
+  font: inherit;
+  font-size: 16px;
+  width: 100%;
+  padding: var(--yw-space-sm) var(--yw-space-md);
+  border: 2px solid var(--yw-color-border);
+  border-radius: var(--yw-radius-sm);
+  background: var(--yw-color-input-bg);
+  color: var(--yw-color-text);
+  outline: none;
+}
+
+.yw-form__input:focus {
+  border-color: var(--yw-color-primary);
+}
+
+.yw-form__section-title {
+  margin: var(--yw-space-md) 0 var(--yw-space-sm) 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.yw-form__radios {
+  display: flex;
+  gap: 15px;
+  margin-bottom: var(--yw-space-md);
+  justify-content: space-between;
+}
+
+.yw-form__radio {
+  display: flex;
+  align-items: center;
+  gap: var(--yw-space-xs);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.yw-form__submit {
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  width: 100%;
+  padding: var(--yw-space-sm) var(--yw-space-md);
+  border: 2px solid transparent;
+  border-radius: var(--yw-radius-pill);
+  background: var(--yw-color-primary);
+  color: var(--yw-color-on-primary);
+  cursor: pointer;
+  transition: background var(--yw-transition);
+}
+
+.yw-form__submit:hover {
+  background: var(--yw-color-primary-hover);
+}
+
+/* ---------- Overlay (общий) ---------- */
+.yw-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--yw-z-overlay);
+  background: var(--yw-color-overlay);
+  display: flex;
+  transition: opacity var(--yw-transition);
+}
+
+.yw-overlay--center {
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(var(--yw-modal-blur));
+}
+
+.yw-overlay--right {
+  justify-content: flex-end;
+}
+
+.yw-overlay--closed {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ---------- Modal ---------- */
+.yw-modal {
+  position: relative;
+  background: var(--yw-color-bg);
+  font-family: var(--yw-font);
+  border-radius: var(--yw-radius-md);
+  padding: var(--yw-space-lg);
+  max-width: var(--yw-modal-max-width);
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--yw-shadow-modal);
+}
+
+.yw-modal__title {
+  margin: 0 0 var(--yw-space-md) 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ---------- Panel ---------- */
+.yw-panel {
+  position: relative;
+  background: var(--yw-color-bg);
+  font-family: var(--yw-font);
+  width: var(--yw-panel-width);
+  max-width: 90%;
+  height: 100vh;
+  padding: var(--yw-space-lg);
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform var(--yw-transition);
+}
+
+.yw-panel--open {
+  transform: translateX(0);
+}
+
+.yw-panel__title {
+  margin: 0 0 var(--yw-space-lg) 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.yw-panel__body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Close / Trigger ---------- */
+.yw-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  color: var(--yw-color-text-muted);
+  cursor: pointer;
+  transition: background var(--yw-transition);
+}
+
+.yw-close:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.yw-trigger {
+  font: inherit;
+  font-family: var(--yw-font);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--yw-radius-sm);
+  background: var(--yw-color-primary);
+  color: var(--yw-color-on-primary);
+  cursor: pointer;
+}
+
+.yw-trigger:hover {
+  background: var(--yw-color-primary-hover);
+}
