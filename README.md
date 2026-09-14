@@ -31,7 +31,7 @@ import 'yoomoney-widget/styles.css';
 
 export function App() {
   return (
-    <Yoomoney receiver="4100111111111111" label="Заказ #12345" defaultSum={500} minSum={100} />
+    <Yoomoney receiver="41001xxxxxxxxxxxx" label="Заказ #12345" defaultSum={500} minSum={100} />
   );
 }
 ```
@@ -55,7 +55,7 @@ import { Yoomoney } from 'yoomoney-widget';
 import 'yoomoney-widget/styles.css';
 
 <Yoomoney
-  receiver="4100111111111111"
+  receiver="41001xxxxxxxxxxxx"
   label="Пополнение счёта"
   successURL="https://example.com/payment/success"
   defaultSum={100}
@@ -70,7 +70,7 @@ import { YoomoneyModal } from 'yoomoney-widget';
 import 'yoomoney-widget/styles.css';
 
 <YoomoneyModal
-  receiver="4100111111111111"
+  receiver="41001xxxxxxxxxxxx"
   buttonText="Оплатить заказ"
   modalTitle="Оформление платежа"
   defaultSum={1500}
@@ -95,7 +95,7 @@ function Checkout() {
       <button onClick={() => setOpen(true)}>Открыть панель оплаты</button>
 
       <YoomoneyPanel
-        receiver="4100111111111111"
+        receiver="41001xxxxxxxxxxxx"
         isOpen={open}
         onClose={() => setOpen(false)}
         panelTitle="Оплата"
@@ -124,7 +124,7 @@ function Checkout() {
 
 ```jsx
 <div style={{ '--yw-color-primary': '#ff6b6b' }}>
-  <Yoomoney receiver="4100111111111111" />
+  <Yoomoney receiver="41001xxxxxxxxxxxx" />
 </div>
 ```
 
@@ -136,7 +136,7 @@ function Checkout() {
 
 ```jsx
 <Yoomoney
-  receiver="4100111111111111"
+  receiver="41001xxxxxxxxxxxx"
   classNames={{
     form: 'rounded-2xl bg-white shadow-lg p-6 max-w-md',
     input: 'w-full rounded-lg bg-slate-100 px-4 py-3',
@@ -158,7 +158,7 @@ function Checkout() {
 
 ```jsx
 <Yoomoney
-  receiver="4100111111111111"
+  receiver="41001xxxxxxxxxxxx"
   sumLabel="Введите сумму пополнения"
   submitText="Оплатить"
   methodTitle={null}
@@ -177,7 +177,7 @@ function Checkout() {
 
 ```jsx
 <Yoomoney
-  receiver="4100111111111111"
+  receiver="41001xxxxxxxxxxxx"
   renderLogo={() => <img src="/my-logo.svg" alt="Logo" width={120} />}
 />
 ```
@@ -187,7 +187,7 @@ function Checkout() {
 Не импортируйте `styles.css` и не передавайте классы — получите чистую форму без оформления. Полезно, когда вся вёрстка на Tailwind или собственной дизайн-системе.
 
 ```jsx
-<Yoomoney receiver="4100111111111111" />
+<Yoomoney receiver="41001xxxxxxxxxxxx" />
 ```
 
 ## Пропсы
@@ -322,7 +322,7 @@ export function Checkout() {
   const [panelOpen, setPanelOpen] = useState(false);
 
   const shared = {
-    receiver: '4100111111111111',
+    receiver: '41001xxxxxxxxxxxx',
     defaultSum: 1000,
     minSum: 100,
   };
