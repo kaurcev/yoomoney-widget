@@ -367,3 +367,6 @@ export function Checkout() {
 ## Лицензия
 
 [MIT](./LICENSE)
+
+
+[![NPM](https://nodei.co/npm/yoomoney-widget.svg?data=d)](https://www.npmjs.com/package/yoomoney-widget)
