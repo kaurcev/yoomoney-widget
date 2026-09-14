@@ -1,6 +1,6 @@
 {
   "name": "yoomoney-widget",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Headless React components for YooMoney payment form. Zero default styles — style it your way.",
   "license": "MIT",
   "author": "kaurcev <skaurcev2004@yandex.ru>",
